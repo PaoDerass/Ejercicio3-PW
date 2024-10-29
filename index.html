@@ -1,11 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculadora de Conversiones</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    
+    <div class="container mt-5">
+        <h2 class="text-center">Conversor de Unidades</h2>
+        <form id="conversionForm" class="mt-4">
+            <div class="form-group">
+                <label for="conversionType">Selecciona la conversión:</label>
+                <select id="conversionType" class="form-control" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="kmToM">Kilómetros a Metros</option>
+                    <option value="mToCm">Metros a Centímetros</option>
+                    <option value="ftToIn">Pies a Pulgadas</option>
+                    <option value="ydToIn">Yardas a Pulgadas</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="value">Valor a convertir:</label>
+                <input type="number" id="valor" class="form-control" placeholder="Ingrese el valor" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Convertir</button>
+        </form>
+        <div id="resultado" class="mt-4 alert alert-info text-center" style="display: none;"></div>
+    </div>
 </body>
 </html>
